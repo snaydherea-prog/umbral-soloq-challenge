@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Umbral SoloQ Challenge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css?v=7" />
+</head>
+<body>
+  <div class="frame-corner frame-corner--tl"></div>
+  <div class="frame-corner frame-corner--tr"></div>
+  <div class="frame-corner frame-corner--bl"></div>
+  <div class="frame-corner frame-corner--br"></div>
+
+  <header class="hero">
+    <div class="hex-icon hex-icon--top" aria-hidden="true">
+      <svg viewBox="0 0 40 40"><polygon points="20,4 34,12 34,28 20,36 6,28 6,12" /><circle cx="20" cy="20" r="4" /></svg>
+    </div>
+    <p class="brand-kicker">UMBRAL</p>
+    <h1><span>SoloQ Challenge</span></h1>
+    <div class="hex-divider" aria-hidden="true">
+      <span class="hex-divider__line"></span>
+      <svg viewBox="0 0 24 24" class="hex-divider__hex"><polygon points="12,2 21,7 21,17 12,22 3,17 3,7" /></svg>
+      <span class="hex-divider__line"></span>
+    </div>
+    <p class="subtitle">Clasificacion en vivo &mdash; solo cuentan las primeras 10 partidas de SoloQ del dia</p>
+    <button type="button" id="rulesButton" class="rules-button">Normas</button>
+    <button type="button" id="prizesButton" class="rules-button">Premios</button>
+    <div class="countdown" id="countdown"></div>
+    <p class="last-updated" id="lastUpdated"></p>
+  </header>
+
+  <div id="rulesModal" class="modal-overlay hidden">
+    <div class="modal-panel">
+      <button type="button" id="rulesCloseButton" class="modal-close" aria-label="Cerrar">&times;</button>
+      <img src="normas.png" alt="Normas del Umbral SoloQ Challenge" class="modal-image" />
+    </div>
+  </div>
+
+  <div id="prizesModal" class="modal-overlay hidden">
+    <div class="modal-panel">
+      <button type="button" id="prizesCloseButton" class="modal-close" aria-label="Cerrar">&times;</button>
+      <img src="premios.png" alt="Premios del Umbral SoloQ Challenge" class="modal-image" />
+    </div>
+  </div>
+
+  <main>
+    <section class="podium" id="podium">
+      <!-- las 3 primeras posiciones se pintan aqui como cards -->
+    </section>
+
+    <div id="podiumHistoryPanel" class="history-panel hidden">
+      <div class="history-panel-header">
+        <span id="podiumHistoryTitle"></span>
+        <button type="button" id="podiumHistoryClose" class="history-panel-close" aria-label="Cerrar">&times;</button>
+      </div>
+      <div id="podiumHistoryBody" class="history-body"></div>
+    </div>
+
+    <table class="leaderboard">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Invocador</th>
+          <th>Rango</th>
+          <th>LP</th>
+          <th>Hoy</th>
+          <th>Partidas</th>
+          <th>WR</th>
+        </tr>
+      </thead>
+      <tbody id="leaderboardBody">
+        <tr><td colspan="7" class="empty">Cargando leaderboard...</td></tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    <p>No afiliado a Riot Games. League of Legends y Riot Games son marcas registradas de Riot Games, Inc.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
