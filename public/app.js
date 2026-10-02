@@ -231,24 +231,9 @@ rulesModal.addEventListener('click', (event) => {
   if (event.target === rulesModal) closeRulesModal();
 });
 
-// --- Modal de premios ---
-const prizesButton = document.getElementById('prizesButton');
-const prizesModal = document.getElementById('prizesModal');
-const prizesCloseButton = document.getElementById('prizesCloseButton');
-
-function openPrizesModal() { prizesModal.classList.remove('hidden'); }
-function closePrizesModal() { prizesModal.classList.add('hidden'); }
-
-prizesButton.addEventListener('click', openPrizesModal);
-prizesCloseButton.addEventListener('click', closePrizesModal);
-prizesModal.addEventListener('click', (event) => {
-  if (event.target === prizesModal) closePrizesModal();
-});
-
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
     closeRulesModal();
-    closePrizesModal();
   }
 });
 
