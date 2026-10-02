@@ -216,6 +216,59 @@ body > * {
   animation: scaleIn 0.22s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* Panel de normas */
+.rules-panel {
+  max-width: min(620px, 92vw);
+  padding: 28px 30px;
+}
+
+.rules-panel h2 {
+  margin: 0 0 24px;
+  padding-right: 35px;
+  text-align: center;
+  font-family: 'Cinzel', serif;
+  font-size: 25px;
+  letter-spacing: 2px;
+  color: var(--gold-light);
+  text-shadow: 0 0 18px var(--gold-glow);
+}
+
+.rules-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.rules-content p {
+  margin: 0;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.025);
+  border-left: 2px solid var(--gold);
+  border-radius: 4px;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.rules-content strong {
+  color: var(--gold-light);
+}
+
+@media (max-width: 600px) {
+  .rules-panel {
+    padding: 24px 20px;
+  }
+
+  .rules-panel h2 {
+    font-size: 21px;
+  }
+
+  .rules-content p {
+    font-size: 13px;
+    padding: 12px 14px;
+  }
+}
+
 .modal-image {
   display: block;
   width: 100%;
