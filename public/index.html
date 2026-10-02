@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="style.css?v=7" />
+<link rel="stylesheet" href="style.css?v=8" />
 </head>
 <body>
   <div class="frame-corner frame-corner--tl"></div>
@@ -28,22 +28,20 @@
     </div>
     <p class="subtitle">Clasificacion en vivo &mdash; solo cuentan las primeras 10 partidas de SoloQ del dia</p>
     <button type="button" id="rulesButton" class="rules-button">Normas</button>
-    <button type="button" id="prizesButton" class="rules-button">Premios</button>
     <div class="countdown" id="countdown"></div>
     <p class="last-updated" id="lastUpdated"></p>
   </header>
 
   <div id="rulesModal" class="modal-overlay hidden">
-    <div class="modal-panel">
+    <div class="modal-panel rules-panel">
       <button type="button" id="rulesCloseButton" class="modal-close" aria-label="Cerrar">&times;</button>
-      <img src="normas.png" alt="Normas del Umbral SoloQ Challenge" class="modal-image" />
-    </div>
-  </div>
-
-  <div id="prizesModal" class="modal-overlay hidden">
-    <div class="modal-panel">
-      <button type="button" id="prizesCloseButton" class="modal-close" aria-label="Cerrar">&times;</button>
-      <img src="premios.png" alt="Premios del Umbral SoloQ Challenge" class="modal-image" />
+      <h2>NORMAS</h2>
+      <div class="rules-content">
+        <p>• <strong>Cuentas nivel 30 nuevas.</strong></p>
+        <p>• <strong>El CAP de la cuenta debe ser similar al de la página; de no ser así, se aplicará baneo del torneo.</strong></p>
+        <p>• <strong>Solo miembros de UMBRAL.</strong></p>
+        <p>• <strong>No se pueden hacer dúos.</strong> Si te toca un miembro dentro de una partida, es aceptable. En caso de que te toque <strong>2 veces o más</strong>, se deberá informar para evitar una posible sanción.</p>
+      </div>
     </div>
   </div>
 
