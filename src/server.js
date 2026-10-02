@@ -4,7 +4,7 @@ const http = require('http');
 const express = require('express');
 const { WebSocketServer } = require('ws');
 const {
-  getParticipants, addParticipant, removeParticipant, getLeaderboard, saveParticipants,
+  initializeStore, getParticipants, addParticipant, removeParticipant, getLeaderboard, saveParticipants,
 } = require('./store');
 const { refreshLeaderboard, scheduleLeaderboardRefresh, refreshAllRoles } = require('./updateLeaderboard');
 const { getRecentMatchSummaries } = require('./matchHistory');
@@ -236,7 +236,14 @@ wss.on('connection', (ws) => {
   }
 });
 
-server.listen(PORT, () => {
-  console.log(`[server] Umbral SoloQ Challenge escuchando en http://localhost:${PORT}`);
-  scheduleLeaderboardRefresh();
-});
+initializeStore()
+  .then(() => {
+    server.listen(PORT, () => {
+      console.log(`[server] Umbral SoloQ Challenge escuchando en http://localhost:${PORT}`);
+      scheduleLeaderboardRefresh();
+    });
+  })
+  .catch((err) => {
+    console.error('[server] Error inicializando el almacenamiento:', err);
+    process.exit(1);
+  });
