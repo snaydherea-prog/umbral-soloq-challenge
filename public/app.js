@@ -193,7 +193,7 @@ async function loadLeaderboard() {
 }
 
 // --- Cuenta regresiva hasta el final del challenge ---
-const CHALLENGE_END = new Date('2026-10-01T00:00:00-05:00');
+const CHALLENGE_END = new Date('2026-11-01T00:00:00-05:00');
 
 function updateCountdown() {
   const el = document.getElementById('countdown');
