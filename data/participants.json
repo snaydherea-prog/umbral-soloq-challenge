@@ -9,6 +9,15 @@
       "roleLabel": "Top",
       "gamesInRole": 8,
       "gamesChecked": 15
+    },
+    "challengeTotalLP": 0,
+    "daily": {
+      "date": "2026-10-03",
+      "startLP": 1036,
+      "gamesToday": 0,
+      "lpToday": 0,
+      "frozen": false,
+      "version": 2
     }
   }
 ]
